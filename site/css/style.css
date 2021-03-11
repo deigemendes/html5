@@ -112,3 +112,123 @@ header p {
     align-items: center;
     padding: 30px;
 }
+
+#Produtos div { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#Fotos h2 {
+    margin-bottom: 20px;
+}
+
+#Fotos img { 
+    width: 100%;
+}
+
+#Contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+#Contato h2 {
+    color: #000000;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #191970;
+    color: #FFFFFF;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00FFFF;
+}
+
+@media screen and (min-width: 768px) { 
+    
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+
+    }
+
+    header { 
+        height: 60px;
+        height: 60ph;
+        justify-content: center;
+    }
+
+    #Sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    #Produtos { 
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    #Produtos h2 {
+        text-align: center;
+        width: 100px;
+    }
+
+    #Produtos div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+
+    #Fotos { 
+        flex-direction: row;
+        flex-wrap: wrap;    
+    }
+
+    #Fotos h2 {
+        width: 100px;
+        text-align: center;
+    }
+
+    #Fotos img {
+        width: 33.3333333%;
+
+    }
+
+    #Contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #Contato h2, #Contato p {
+        width: 100%;
+    }
+}
+
