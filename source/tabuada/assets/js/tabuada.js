@@ -1,26 +1,38 @@
-let tabuada = document.querySelector("#tabuada tbody");
+/*
+Função de calculo do HTML 
+*/
 
-let valorA = 5; 
+function calculaTabuada() { 
 
-tabuada.innerHTML = '' ; 
+        let tabuada = document.querySelector("#tabuada tbody");
 
-for (let valorB = 0; valorB <= 10; valorB++) {
-    
-let resultado = valorA * valorB;
+        let valorA = parseInt(document.querySelector('#valorA').value , 8); 
 
-let template = `
+        tabuada.innerHTML = '' ; 
 
-<td>${valorA}</td>
-<td>x</td>
-<td>${valorB}</td>
-<td>=</td>
-<td>${resultado}</td>
+        for (let valorB = 0; valorB <= 10; valorB++) {
+            
+        let resultado = valorA * valorB;
 
-`; 
+        let template = `
 
-let tr = document.createElement('tr'); 
+        <td>${valorA}</td>
+        <td>x</td>
+        <td>${valorB}</td>
+        <td>=</td>
+        <td>${resultado}</td>
 
-tr.innerHTML = template; 
+        `; 
 
-tabuada.append(tr); 
+        let tr = document.createElement('tr'); 
+
+        tr.innerHTML = template; 
+
+        tabuada.append(tr); 
+    }
+
 }
+
+calculaTabuada(); 
+
+document.querySelector('#valorA').addEventListener('change', calculaTabuada );
