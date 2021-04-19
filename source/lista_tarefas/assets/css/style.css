@@ -125,6 +125,15 @@ footer {
     cursor: not-allowed;
 }
 
+.todo button { 
+    width: initial;
+    color: #FFF;
+    background-color: red;
+    float: right; 
+    min-width: 30px; 
+
+}
+
 #new-task {
     width: 100%;
     padding: 10px;
