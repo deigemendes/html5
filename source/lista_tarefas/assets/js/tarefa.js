@@ -33,7 +33,23 @@ data.forEach(task => {
 
     li.querySelector('button').addEventListener("click", e=> {
 
-        console.log(e.target.parentNode.querySelector('input').id.split('-')[1])
+        let button = e.target; 
+        let li = button.parentNode;
+        let input = li.querySelector('input');
+        let id = input.id ; 
+        let idArray = id.split('-');
+        let todoId = idArray[1]; 
+        let title = li.querySelector('label').innerText; 
+        //console.log(e.target.parentNode.querySelector('input').id.split('-')[1])
+
+        if (confirm(`Deseja realmente excluir a tarefa ${title} ?`)){
+        data = data.filter(task => {
+            return (task.id !== parseInt(todoId));
+        })
+
+        renderTodo(); 
+        
+    } 
 
     });
 
