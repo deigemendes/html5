@@ -14,6 +14,49 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    display: flex;
+    
+}
 
+header .bg-gradiente {
+    min-height: 300px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(0,0,0,.65),0%, rgba(0,0,0,0), 100%);
+}
+
+header .header-border { 
+    display: flex;
+    border-bottom: rgba(255,255,255,.25) 1px solid;
+}
+
+header #logo {
+    width: 200px;
+    color: #FFF;
+    line-height: 60px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: #000 1px 1px 8px;
+}
+
+header #menu {
+    flex: 1;
+}
+
+header #menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+}
+
+header #menu li {
+    min-width: 100px;
+    line-height: 28px;
+}
+
+header #menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
 }
