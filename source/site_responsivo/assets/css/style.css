@@ -147,6 +147,13 @@ footer  .menu a {
     display: none;
 }
 
+.backdrop { 
+    display:none; 
+}
+
+.close-menu {
+    display:none; 
+}
 @media(max-width: 450px) {
     .menu .close-menu{
         display: block;
@@ -157,10 +164,11 @@ footer  .menu a {
         background-color: none;
         border: none;
         font-size: 2em;
-        padding: .75rem 2rem;
+        padding: .75rem 1rem;
     }
     .menu.open .backdrop {
         opacity: .5;
+        display: block;
     }
     .menu .backdrop {
         opacity: 0;
