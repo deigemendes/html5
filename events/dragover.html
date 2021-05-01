@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - Drag Over</title>
+    <!--Eventos de formulários-->
+    <style>
+        #drag {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+
+        #target {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    
+        <div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true"></div>
+        <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" ondragover="debug(event)"></div>
+
+    <script>
+        function debug(e) {
+          
+            console.log('Eventos' + e.type)
+            
+        }
+    </script>
+</body>
+</html>
