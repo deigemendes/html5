@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - cut and past </title>
+    <!--Eventos de formulários-->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        #target {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+        body{
+            height: 200vh;
+        }
+    </style>
+</head>
+<body >
+    
+        <input oncut="debug(event)" type="text"> 
+        <input onpaste="debug(event)" type="text">
+    
+       <p oncut="debug(event)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugit ratione est blanditiis facere. Voluptate voluptatibus enim, temporibus assumenda nostrum quas, soluta alias quaerat cumque ducimus ab cupiditate esse. Laboriosam.</p>
+
+
+    <script>
+        function debug(e) {
+          
+            console.log('Eventos' + e.type)
+            
+        }
+    </script>
+</body>
+</html>
